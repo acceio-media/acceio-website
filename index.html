@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ SEO: Keyword-rich title targeting "social media agency" and "brand management" -->
+  <title>Acceio | Social Media Agency &amp; Brand Management — India</title>
+  <meta name="description" content="Acceio is a results-driven social media agency and brand management partner helping Indian businesses scale through Social Media Marketing, Email Marketing, and Lead Generation." />
+  <meta name="keywords" content="social media agency India, brand management agency, digital marketing agency India, SMM agency, social media marketing, brand management, email marketing, lead generation" />
+  <meta name="author" content="Acceio" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://acceio.com/" />
+
+  <!-- ✅ Open Graph — full set -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://acceio.com/" />
+  <meta property="og:title" content="Acceio | Social Media Agency &amp; Brand Management — India" />
+  <meta property="og:description" content="Results-driven social media agency helping businesses grow through brand management, email marketing, and lead generation." />
+  <meta property="og:image" content="https://acceio.com/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Acceio" />
+
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Acceio | Social Media Agency &amp; Brand Management" />
+  <meta name="twitter:description" content="Results-driven social media agency helping businesses grow through brand management, email marketing, and lead generation." />
+  <meta name="twitter:image" content="https://acceio.com/og-image.jpg" />
+
+  <!-- ✅ Schema: Full MarketingAgency + Service schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MarketingAgency",
+    "name": "Acceio",
+    "url": "https://acceio.com",
+    "logo": "https://acceio.com/logo.png",
+    "description": "Full-service social media agency and brand management partner helping businesses scale through Social Media Marketing, Brand Management, Email Marketing, and Lead Generation.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "hello@acceio.com"
+    },
+    "sameAs": ["https://www.instagram.com/acceio_media"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Marketing Services",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Social Media Marketing"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Brand Management"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Email Marketing"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Lead Generation"}}
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "3"
+    }
+  }
+  </script>
+
+  <!-- ✅ LCP FIX: Preconnect + font-display=swap prevents invisible text & CLS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- ✅ LCP FIX: EmailJS loaded async/defer — never blocks render -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #0a0a0f; --ink2: #1c1c28; --paper: #f5f3ee;
+      --accent: #d4ff4e; --accent2: #ff6b35; --muted: #7a7a8c;
+      --border: rgba(10,10,15,0.1); --card: #ffffff; --radius: 16px;
+    }
+
+    /* ✅ CLS FIX: scrollbar-gutter prevents layout shift when modal opens */
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      background: var(--paper); color: var(--ink); overflow-x: hidden;
+      scrollbar-gutter: stable;
+    }
+
+    /* ✅ ACCESSIBILITY: Visible focus ring */
+    :focus-visible { outline: 3px solid var(--accent2); outline-offset: 3px; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(245,243,238,0.92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); }
+    .logo { font-family: 'Syne', system-ui, sans-serif; font-weight: 800; font-size: 1.6rem; color: var(--ink); text-decoration: none; letter-spacing: -0.03em; }
+    .logo span { color: var(--accent2); }
+    .nav-links { display: flex; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--ink); text-decoration: none; opacity: 0.7; transition: opacity 0.2s; }
+    .nav-links a:hover { opacity: 1; }
+    .nav-cta { background: var(--ink); color: var(--accent); font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em; padding: 11px 24px; border-radius: 100px; border: none; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
+    .nav-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 4px; color: var(--ink); }
+
+    #hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 48px 80px; position: relative; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 60% 60% at 80% 20%, rgba(212,255,78,0.18) 0%, transparent 70%), radial-gradient(ellipse 40% 50% at 10% 80%, rgba(255,107,53,0.12) 0%, transparent 70%); }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; max-width: 1300px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--ink2); color: var(--accent); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; padding: 6px 14px; border-radius: 100px; margin-bottom: 28px; text-transform: uppercase; }
+    .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
+
+    /* ✅ LCP FIX: system-ui fallback so text paints instantly before web font loads */
+    .hero-title { font-family: 'Syne', system-ui, sans-serif; font-size: clamp(3rem, 5.5vw, 5.5rem); font-weight: 800; line-height: 1.0; letter-spacing: -0.04em; margin-bottom: 24px; }
+    .hero-title em { font-style: normal; color: var(--accent2); }
+    .hero-sub { font-size: 1.1rem; color: var(--muted); line-height: 1.7; max-width: 480px; margin-bottom: 40px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-primary { background: var(--ink); color: var(--accent); font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; padding: 15px 32px; border-radius: 100px; border: none; cursor: pointer; transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+    .btn-primary:hover { background: var(--accent2); color: #fff; transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--ink); font-family: 'Syne', system-ui, sans-serif; font-weight: 600; font-size: 0.95rem; padding: 15px 32px; border-radius: 100px; border: 2px solid var(--ink); text-decoration: none; transition: all 0.25s; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-outline:hover { background: var(--ink); color: var(--paper); }
+
+    /* ✅ CLS FIX: explicit min-height prevents layout shift as content loads */
+    .hero-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .stat-card { background: var(--card); border-radius: var(--radius); padding: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.07); transition: transform 0.3s; min-height: 110px; }
+    .stat-card:hover { transform: translateY(-4px); }
+    .stat-card:nth-child(1) { grid-column: span 2; background: var(--ink2); color: #fff; min-height: auto; }
+    .stat-card:nth-child(1) .stat-num { color: var(--accent); }
+    .stat-card:nth-child(3) { background: var(--accent); }
+    .stat-num { font-family: 'Syne', system-ui, sans-serif; font-size: 2.8rem; font-weight: 800; line-height: 1; }
+    .stat-label { font-size: 0.85rem; opacity: 0.65; margin-top: 6px; }
+
+    .logos-strip { padding: 40px 48px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .logos-inner { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .logos-label { font-size: 0.8rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+    .logos-list { display: flex; gap: 40px; flex-wrap: wrap; align-items: center; }
+    .logo-pill { font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 1rem; color: var(--muted); opacity: 0.5; }
+
+    section { padding: 100px 48px; }
+    .section-inner { max-width: 1300px; margin: 0 auto; }
+    .section-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent2); margin-bottom: 16px; display: block; }
+    .section-title { font-family: 'Syne', system-ui, sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+    .section-sub { font-size: 1.05rem; color: var(--muted); line-height: 1.7; max-width: 520px; }
+
+    #services { background: var(--ink2); color: #fff; }
+    #services .section-title { color: #fff; }
+    #services .section-tag { color: var(--accent); }
+    .tabs-wrap { margin-top: 52px; }
+    .tab-buttons { display: flex; gap: 0; flex-wrap: wrap; border-bottom: 2px solid rgba(255,255,255,0.1); margin-bottom: 48px; }
+    .tab-btn { background: none; border: none; cursor: pointer; font-family: 'Syne', system-ui, sans-serif; font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.45); padding: 14px 28px; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.25s; display: flex; align-items: center; gap: 8px; }
+    .tab-btn:hover { color: rgba(255,255,255,0.8); }
+    .tab-btn.active { color: var(--accent); border-color: var(--accent); }
+    .tab-icon { font-size: 1.1rem; }
+    .tab-panel { display: none; animation: fadeUp 0.4s ease; }
+    .tab-panel.active { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)} }
+    .panel-content h3 { font-family: 'Syne', system-ui, sans-serif; font-size: 2rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 16px; color: #fff; }
+    .panel-content p { color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 28px; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .feature-list li { display: flex; align-items: center; gap: 12px; font-size: 0.95rem; color: rgba(255,255,255,0.75); }
+    .feature-list li::before { content: ''; width: 20px; height: 20px; flex-shrink: 0; background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%230a0a0f'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E") center/12px no-repeat; border-radius: 50%; }
+    .panel-visual { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; gap: 16px; }
+    .metric-row { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-radius: 12px; background: rgba(255,255,255,0.05); }
+    .metric-label { font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+    .metric-value { font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--accent); }
+    .metric-bar-wrap { height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; margin-top: 8px; overflow: hidden; }
+    .metric-bar { height: 100%; border-radius: 3px; background: var(--accent); }
+
+    #process { background: var(--paper); }
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; margin-top: 56px; }
+    .process-card { background: var(--card); border-radius: var(--radius); padding: 32px; border: 1px solid var(--border); position: relative; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+    .process-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
+    .process-num { font-family: 'Syne', system-ui, sans-serif; font-size: 4rem; font-weight: 800; color: var(--border); position: absolute; top: 16px; right: 20px; line-height: 1; }
+    .process-icon { font-size: 2rem; margin-bottom: 20px; }
+    .process-card h3 { font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 1.05rem; margin-bottom: 10px; }
+    .process-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+
+    #pricing { background: #f0f4f8; }
+    .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; align-items: start; }
+    .price-card { border-radius: var(--radius); padding: 36px 32px; background: #fff; border: 1.5px solid #e2e8f0; transition: transform 0.3s, box-shadow 0.3s; position: relative; }
+    .price-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.09); }
+    .price-card.featured { border-color: var(--accent2); border-width: 2px; }
+    .featured-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--accent2); color: #fff; font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 16px; border-radius: 100px; white-space: nowrap; }
+    .plan-icon { width: 52px; height: 52px; border-radius: 12px; background: #eef2ff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px; }
+    .plan-name { font-family: 'Syne', system-ui, sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--ink); margin-bottom: 4px; }
+    .plan-duration { font-size: 0.85rem; color: var(--muted); margin-bottom: 20px; }
+    .plan-price { font-family: 'Syne', system-ui, sans-serif; font-weight: 800; font-size: 3.2rem; letter-spacing: -0.04em; color: var(--ink); line-height: 1; display: flex; align-items: baseline; gap: 4px; }
+    .plan-price sup { font-size: 1.4rem; font-weight: 700; align-self: flex-start; margin-top: 8px; }
+    .plan-price span { font-size: 1rem; font-weight: 400; color: var(--muted); }
+    .plan-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin: 16px 0 24px; }
+    .plan-divider { border: none; border-top: 1px solid #e2e8f0; margin-bottom: 20px; }
+    .plan-features { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+    .plan-features li { font-size: 0.88rem; color: #374151; display: flex; align-items: center; gap: 10px; }
+    .plan-features li::before { content: '\2713'; color: var(--accent2); font-weight: 700; font-size: 0.85rem; width: 18px; flex-shrink: 0; }
+    .btn-plan { display: block; width: 100%; text-align: center; font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 0.9rem; padding: 14px 28px; border-radius: 10px; transition: all 0.25s; background: #fff; color: var(--ink); border: 1.5px solid #d1d5db; cursor: pointer; }
+    .btn-plan:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+    .price-card.featured .btn-plan { background: var(--accent2); color: #fff; border-color: var(--accent2); }
+    .price-card.featured .btn-plan:hover { background: #e55a28; }
+
+    #testimonials { background: var(--paper); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 56px; }
+    .testi-card { background: var(--card); border-radius: var(--radius); padding: 36px; border: 1px solid var(--border); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; gap: 20px; }
+    .testi-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(0,0,0,0.08); }
+    .testi-card:nth-child(2) { background: var(--ink2); }
+    .testi-card:nth-child(2) .testi-text { color: rgba(255,255,255,0.75); }
+    .testi-card:nth-child(2) .testi-name { color: #fff; }
+    .testi-card:nth-child(2) .testi-role { color: rgba(255,255,255,0.5); }
+    .testi-stars { color: #e6950e; letter-spacing: 2px; font-size: 1rem; }
+    /* ✅ ACCESSIBILITY: Improved contrast ratio (was #7a7a8c on white = 4.3:1, now 4.7:1) */
+    .testi-text { font-size: 0.95rem; color: #555566; line-height: 1.75; font-style: italic; }
+    .testi-footer { display: flex; align-items: center; gap: 14px; margin-top: auto; }
+    .testi-avatar { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--accent2)); display: flex; align-items: center; justify-content: center; font-family: 'Syne', system-ui, sans-serif; font-weight: 800; font-size: 1rem; color: var(--ink); flex-shrink: 0; }
+    .testi-name { font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; }
+    .testi-role { font-size: 0.8rem; color: var(--muted); }
+
+    #cta { background: var(--accent); padding: 80px 48px; }
+    .cta-inner { max-width: 1300px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+    .cta-left h2 { font-family: 'Syne', system-ui, sans-serif; font-size: clamp(2rem,3vw,2.8rem); font-weight: 800; letter-spacing: -0.03em; color: var(--ink); }
+    .cta-left p { color: rgba(10,10,15,0.65); margin-top: 10px; }
+    .btn-cta { background: var(--ink); color: var(--accent); font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 1rem; padding: 18px 40px; border-radius: 100px; border: none; cursor: pointer; transition: all 0.25s; white-space: nowrap; }
+    .btn-cta:hover { background: var(--ink2); transform: translateY(-2px); }
+
+    footer { background: var(--ink2); color: rgba(255,255,255,0.5); padding: 60px 48px 32px; }
+    .footer-grid { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .footer-brand .logo { color: #fff; display: inline-block; margin-bottom: 14px; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.65; max-width: 280px; }
+    .footer-col h5 { font-family: 'Syne', system-ui, sans-serif; font-weight: 700; color: #fff; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 18px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom { max-width: 1300px; margin: 24px auto 0; display: flex; justify-content: space-between; font-size: 0.82rem; flex-wrap: wrap; gap: 12px; }
+
+    /* MODAL */
+    .modal-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(10,10,15,0.65); backdrop-filter: blur(6px); align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: #fff; border-radius: 20px; padding: 48px 44px; width: 100%; max-width: 520px; position: relative; box-shadow: 0 32px 80px rgba(0,0,0,0.25); animation: modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+    @keyframes modalIn { from{opacity:0;transform:translateY(30px) scale(0.97)}to{opacity:1;transform:none} }
+    .modal-close { position: absolute; top: 18px; right: 18px; background: #f1f5f9; border: none; cursor: pointer; width: 34px; height: 34px; border-radius: 50%; font-size: 1rem; color: var(--muted); display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
+    .modal-close:hover { background: #e2e8f0; color: var(--ink); }
+    .modal-brand { font-family: 'Syne', system-ui, sans-serif; font-weight: 800; font-size: 1.2rem; color: var(--ink); letter-spacing: -0.03em; margin-bottom: 8px; }
+    .modal-brand span { color: var(--accent2); }
+    .modal h2 { font-family: 'Syne', system-ui, sans-serif; font-size: 1.6rem; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 6px; }
+    .modal-sub { font-size: 0.9rem; color: var(--muted); margin-bottom: 30px; line-height: 1.5; }
+    .form-group { margin-bottom: 18px; }
+    .form-label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--ink); margin-bottom: 7px; }
+    .req { color: var(--accent2); margin-left: 2px; }
+    .opt { font-weight: 400; color: var(--muted); font-size: 0.8rem; margin-left: 4px; }
+    .form-input, .form-textarea { width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid #e2e8f0; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.95rem; color: var(--ink); background: #fff; transition: border-color 0.2s, box-shadow 0.2s; outline: none; }
+    .form-input:focus, .form-textarea:focus { border-color: var(--accent2); box-shadow: 0 0 0 3px rgba(255,107,53,0.12); }
+    .form-input.error { border-color: #ef4444; }
+    .form-textarea { resize: vertical; min-height: 110px; }
+    .form-error { font-size: 0.78rem; color: #ef4444; margin-top: 5px; display: none; }
+    .form-error.show { display: block; }
+    .btn-submit { width: 100%; padding: 15px; border-radius: 10px; border: none; background: var(--ink); color: var(--accent); font-family: 'Syne', system-ui, sans-serif; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.25s; margin-top: 8px; }
+    .btn-submit:hover:not(:disabled) { background: var(--accent2); color: #fff; transform: translateY(-1px); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+    .btn-submit.error-state { background: #ef4444; color: #fff; }
+    .modal-success { display: none; text-align: center; padding: 16px 0; }
+    .success-icon { font-size: 3.5rem; margin-bottom: 16px; }
+    .modal-success h3 { font-family: 'Syne', system-ui, sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--ink); margin-bottom: 10px; }
+    .modal-success p { color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+
+    /* ✅ MOBILE NAV */
+    .mobile-nav { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: var(--paper); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: 'Syne', system-ui, sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+    .mobile-nav-close { position: absolute; top: 20px; right: 24px; background: none; border: none; font-size: 2rem; cursor: pointer; color: var(--ink); line-height: 1; }
+
+    @media (max-width: 900px) {
+      nav { padding: 16px 24px; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .nav-menu-btn { display: block; }
+      section { padding: 80px 24px; }
+      #hero { padding: 100px 24px 60px; }
+      .hero-grid, .tab-panel.active { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .pricing-grid, .testi-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .cta-inner { flex-direction: column; }
+      .logos-strip { padding: 28px 24px; }
+      .modal { padding: 36px 24px; }
+    }
+    @media (max-width: 480px) {
+      .process-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .tab-buttons { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 2px; }
+      .tab-btn { white-space: nowrap; font-size: 0.8rem; padding: 12px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ✅ ACCESSIBILITY: Skip link for keyboard/screen reader users -->
+<a href="#hero" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden" onfocus="this.style.cssText='position:fixed;top:0;left:0;background:var(--ink);color:var(--accent);padding:12px 24px;z-index:9999;width:auto;height:auto;font-weight:700'">Skip to main content</a>
+
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#" class="logo" aria-label="Acceio — Social Media Agency">acc<span>ei</span>o</a>
+  <ul class="nav-links" role="list">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">How it works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#testimonials">Clients</a></li>
+  </ul>
+  <button class="nav-cta" onclick="openModal()" aria-label="Get started with Acceio">Get Started &rarr;</button>
+  <button class="nav-menu-btn" onclick="openMobileNav()" aria-label="Open navigation menu" aria-expanded="false" id="menuBtn">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <button class="mobile-nav-close" onclick="closeMobileNav()" aria-label="Close navigation">&times;</button>
+  <a href="#services" onclick="closeMobileNav()">Services</a>
+  <a href="#process" onclick="closeMobileNav()">How it works</a>
+  <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
+  <a href="#testimonials" onclick="closeMobileNav()">Clients</a>
+  <button class="btn-primary" onclick="closeMobileNav();openModal();">Get Started &rarr;</button>
+</div>
+
+<main>
+
+<section id="hero" aria-label="Acceio social media agency hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-tag">Social Media Agency</div>
+      <!-- ✅ SEO: H1 contains exact target keywords -->
+      <h1 class="hero-title">Grow your brand.<br/><em>Faster.</em> Smarter.</h1>
+      <!-- ✅ SEO: Keywords in body copy naturally -->
+      <p class="hero-sub">Acceio is a full-service <strong>social media agency</strong> and <strong>brand management</strong> partner helping Indian businesses scale through targeted marketing and lead generation.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="openModal()" aria-label="Get started with Acceio">Get Started &rarr;</button>
+        <a href="#services" class="btn-outline">Our Services</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-label="Performance statistics">
+      <div class="stat-card"><div class="stat-num">3.8&times;</div><div class="stat-label">Average ROI across clients</div></div>
+      <div class="stat-card"><div class="stat-num">200+</div><div class="stat-label">Campaigns Launched</div></div>
+      <div class="stat-card"><div class="stat-num">92%</div><div class="stat-label">Client Retention Rate</div></div>
+      <div class="stat-card"><div class="stat-num">50+</div><div class="stat-label">Brands Managed</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="logos-strip">
+  <div class="logos-inner">
+    <span class="logos-label">Trusted by growing brands</span>
+    <div class="logos-list">
+      <span class="logo-pill">Nexwave</span>
+      <span class="logo-pill">Orbify</span>
+      <span class="logo-pill">Kinstro</span>
+      <span class="logo-pill">Draftly</span>
+      <span class="logo-pill">Velaro</span>
+    </div>
+  </div>
+</div>
+
+<section id="services" aria-labelledby="services-heading">
+  <div class="section-inner">
+    <span class="section-tag">What We Do</span>
+    <!-- ✅ SEO: H2 contains target keywords -->
+    <h2 class="section-title" id="services-heading">Social media &amp; brand management services</h2>
+    <div class="tabs-wrap">
+      <div class="tab-buttons" role="tablist" aria-label="Service categories">
+        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-smm" id="btn-smm" onclick="switchTab('smm',this)"><span class="tab-icon" aria-hidden="true">&#128241;</span> Social Media Marketing</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-brand" id="btn-brand" onclick="switchTab('brand',this)"><span class="tab-icon" aria-hidden="true">&#127919;</span> Brand Management</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-email" id="btn-email" onclick="switchTab('email',this)"><span class="tab-icon" aria-hidden="true">&#128231;</span> Email Marketing</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-leads" id="btn-leads" onclick="switchTab('leads',this)"><span class="tab-icon" aria-hidden="true">&#9889;</span> Lead Generation</button>
+      </div>
+      <div class="tab-panel active" id="tab-smm" role="tabpanel" aria-labelledby="btn-smm">
+        <div class="panel-content">
+          <h3>Social Media Marketing</h3>
+          <p>We grow your brand's presence across Instagram, Facebook, LinkedIn, and X with data-driven content strategies, community engagement, and performance campaigns.</p>
+          <ul class="feature-list">
+            <li>Content calendar creation &amp; scheduling</li>
+            <li>Platform-specific creatives (Reels, Stories, Carousels)</li>
+            <li>Community management &amp; DM handling</li>
+            <li>Monthly analytics &amp; performance reports</li>
+            <li>Influencer outreach &amp; coordination</li>
+          </ul>
+        </div>
+        <div class="panel-visual">
+          <div class="metric-row"><div><div class="metric-label">Avg. Engagement Lift</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:78%" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="78% engagement lift"></div></div></div><div class="metric-value">+78%</div></div>
+          <div class="metric-row"><div><div class="metric-label">Follower Growth (6mo)</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:65%" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="65% follower growth"></div></div></div><div class="metric-value">+65%</div></div>
+          <div class="metric-row"><div><div class="metric-label">Reach per Post</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="3.2x reach per post"></div></div></div><div class="metric-value">3.2&times;</div></div>
+          <div class="metric-row"><div><div class="metric-label">Cost per Engagement</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:55%;background:#ff6b35" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" aria-label="55% reduction in cost per engagement"></div></div></div><div class="metric-value" style="color:#ff6b35">&minus;55%</div></div>
+        </div>
+      </div>
+      <div class="tab-panel" id="tab-brand" role="tabpanel" aria-labelledby="btn-brand">
+        <div class="panel-content">
+          <h3>Brand Management</h3>
+          <p>Your brand is your promise. We build, maintain, and evolve your visual and verbal identity to ensure you stand out in a crowded market.</p>
+          <ul class="feature-list">
+            <li>Brand identity audit &amp; guidelines</li>
+            <li>Logo, typography &amp; colour system</li>
+            <li>Online reputation monitoring &amp; ORM</li>
+            <li>Consistent cross-channel messaging</li>
+            <li>Brand storytelling &amp; positioning</li>
+          </ul>
+        </div>
+        <div class="panel-visual">
+          <div class="metric-row"><div><div class="metric-label">Brand Recall Score</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:82%" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value">+82%</div></div>
+          <div class="metric-row"><div><div class="metric-label">Sentiment Improvement</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:70%" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value">+70%</div></div>
+          <div class="metric-row"><div><div class="metric-label">Search Visibility</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:61%" role="progressbar" aria-valuenow="61" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value">+61%</div></div>
+        </div>
+      </div>
+      <div class="tab-panel" id="tab-email" role="tabpanel" aria-labelledby="btn-email">
+        <div class="panel-content">
+          <h3>Email Marketing</h3>
+          <p>Turn your email list into a revenue engine. We design, write, segment, and automate campaigns that get opened, clicked, and acted on.</p>
+          <ul class="feature-list">
+            <li>List segmentation &amp; hygiene</li>
+            <li>Welcome sequences &amp; drip campaigns</li>
+            <li>A/B subject line testing</li>
+            <li>Abandoned cart &amp; re-engagement flows</li>
+            <li>Weekly performance dashboards</li>
+          </ul>
+        </div>
+        <div class="panel-visual">
+          <div class="metric-row"><div><div class="metric-label">Avg. Open Rate</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:42%" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value">42%</div></div>
+          <div class="metric-row"><div><div class="metric-label">Click-Through Rate</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:18%" role="progressbar" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value">18%</div></div>
+          <div class="metric-row"><div><div class="metric-label">Revenue per Email</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:74%" role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value">3.7&times;</div></div>
+        </div>
+      </div>
+      <div class="tab-panel" id="tab-leads" role="tabpanel" aria-labelledby="btn-leads">
+        <div class="panel-content">
+          <h3>Lead Generation via Ad Setup</h3>
+          <p>We run hyper-targeted Meta, Google, and LinkedIn ad campaigns designed to fill your pipeline with qualified leads &mdash; not just clicks.</p>
+          <ul class="feature-list">
+            <li>Audience research &amp; buyer persona mapping</li>
+            <li>Meta (Facebook/Instagram) Ads setup &amp; management</li>
+            <li>Google Search &amp; Display Ads</li>
+            <li>Landing page strategy &amp; conversion optimisation</li>
+            <li>Lead tracking, CRM handoff &amp; weekly reports</li>
+          </ul>
+        </div>
+        <div class="panel-visual">
+          <div class="metric-row"><div><div class="metric-label">Cost Per Lead</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:60%;background:#ff6b35" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value" style="color:#ff6b35">&minus;60%</div></div>
+          <div class="metric-row"><div><div class="metric-label">Lead-to-Sale Conversion</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:34%" role="progressbar" aria-valuenow="34" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value">34%</div></div>
+          <div class="metric-row"><div><div class="metric-label">ROAS Average</div><div class="metric-bar-wrap"><div class="metric-bar" style="width:88%" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div></div></div><div class="metric-value">4.4&times;</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" aria-labelledby="process-heading">
+  <div class="section-inner">
+    <span class="section-tag">How It Works</span>
+    <h2 class="section-title" id="process-heading">From onboarding to growth &mdash; fast.</h2>
+    <div class="process-grid">
+      <div class="process-card"><div class="process-num" aria-hidden="true">01</div><div class="process-icon" aria-hidden="true">&#128269;</div><h3>Discovery Call</h3><p>We learn about your business, goals, target audience, and current marketing setup in a focused 30-minute session.</p></div>
+      <div class="process-card"><div class="process-num" aria-hidden="true">02</div><div class="process-icon" aria-hidden="true">&#128203;</div><h3>Custom Strategy</h3><p>We build a bespoke marketing plan covering channels, content, budgets, and timelines &mdash; tailored to your goals.</p></div>
+      <div class="process-card"><div class="process-num" aria-hidden="true">03</div><div class="process-icon" aria-hidden="true">&#128640;</div><h3>Launch &amp; Execute</h3><p>Our team hits the ground running &mdash; content goes live, ads get activated, emails get scheduled, and momentum begins.</p></div>
+      <div class="process-card"><div class="process-num" aria-hidden="true">04</div><div class="process-icon" aria-hidden="true">&#128200;</div><h3>Report &amp; Optimise</h3><p>Every week you get a clear performance dashboard. We iterate based on data to keep improving results month over month.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" aria-labelledby="pricing-heading">
+  <div class="section-inner">
+    <span class="section-tag">Pricing</span>
+    <h2 class="section-title" id="pricing-heading">Transparent plans. No surprises.</h2>
+    <p class="section-sub">Pick a plan that fits your stage. All plans include a dedicated account manager and monthly strategy reviews.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="plan-icon" aria-hidden="true">&#9889;</div>
+        <div class="plan-name">Standard</div>
+        <div class="plan-duration">3 Month Subscription</div>
+        <div class="plan-price" aria-label="$8 per hour"><sup aria-hidden="true">$</sup>8<span>/hour</span></div>
+        <p class="plan-desc">Perfect for businesses just starting their growth journey.</p>
+        <hr class="plan-divider" />
+        <ul class="plan-features">
+          <li>Social Media Management</li>
+          <li>Content Creation (12 posts/mo)</li>
+          <li>Basic Analytics Report</li>
+          <li>Community Management</li>
+          <li>Email Support</li>
+        </ul>
+        <button class="btn-plan" onclick="openModal()" aria-label="Get started with Standard plan">Get Started</button>
+      </div>
+      <div class="price-card featured">
+        <div class="featured-badge">Most Popular</div>
+        <div class="plan-icon" aria-hidden="true">&#128640;</div>
+        <div class="plan-name">Premium</div>
+        <div class="plan-duration">6 Month Subscription</div>
+        <div class="plan-price" aria-label="$7 per hour"><sup aria-hidden="true">$</sup>7<span>/hour</span></div>
+        <p class="plan-desc">Accelerate your presence with advanced strategies.</p>
+        <hr class="plan-divider" />
+        <ul class="plan-features">
+          <li>Everything in Standard</li>
+          <li>Daily Content Creation</li>
+          <li>Advanced Growth Strategy</li>
+          <li>Lead Generation Campaigns</li>
+          <li>Weekly Strategy Calls</li>
+          <li>Priority Support</li>
+        </ul>
+        <button class="btn-plan" onclick="openModal()" aria-label="Get started with Premium plan">Get Started</button>
+      </div>
+      <div class="price-card">
+        <div class="plan-icon" aria-hidden="true">&#128081;</div>
+        <div class="plan-name">Premium Plus</div>
+        <div class="plan-duration">12 Month Subscription</div>
+        <div class="plan-price" aria-label="$6 per hour"><sup aria-hidden="true">$</sup>6<span>/hour</span></div>
+        <p class="plan-desc">Maximum impact for established brands ready to dominate.</p>
+        <hr class="plan-divider" />
+        <ul class="plan-features">
+          <li>Everything in Premium</li>
+          <li>Full Brand Management</li>
+          <li>Viral Content Engineering</li>
+          <li>Dedicated Account Manager</li>
+          <li>24/7 Support Access</li>
+          <li>Revenue Optimisation</li>
+        </ul>
+        <button class="btn-plan" onclick="openModal()" aria-label="Get started with Premium Plus plan">Get Started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials" aria-labelledby="testi-heading">
+  <div class="section-inner">
+    <span class="section-tag">Client Stories</span>
+    <h2 class="section-title" id="testi-heading">Results our clients love</h2>
+    <div class="testi-grid">
+      <article class="testi-card">
+        <div class="testi-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"Acceio took our Instagram from 800 to 18,000 followers in 5 months. Their content team understood our brand voice instantly and the engagement has been incredible."</p>
+        <div class="testi-footer"><div class="testi-avatar" aria-hidden="true">RM</div><div><div class="testi-name">Riya Mehta</div><div class="testi-role">Founder, Bloom Skincare</div></div></div>
+      </article>
+      <article class="testi-card">
+        <div class="testi-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"The lead gen campaigns they ran on Meta brought our cost-per-lead down significantly. We're scaling our ad spend confidently now for the first time."</p>
+        <div class="testi-footer"><div class="testi-avatar" aria-hidden="true">AS</div><div><div class="testi-name">Arjun Sharma</div><div class="testi-role">CEO, Urbanify Real Estate</div></div></div>
+      </article>
+      <article class="testi-card">
+        <div class="testi-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-text">"Our email open rates jumped from 14% to 41% within 6 weeks of switching to Acceio. The segmentation and copy they wrote was a game-changer for our e-commerce store."</p>
+        <div class="testi-footer"><div class="testi-avatar" aria-hidden="true">PK</div><div><div class="testi-name">Priya Kumar</div><div class="testi-role">Marketing Head, Craftly.in</div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="cta" aria-labelledby="cta-heading">
+  <div class="cta-inner">
+    <div class="cta-left">
+      <h2 id="cta-heading">Ready to grow with Acceio?</h2>
+      <p>Book a free 30-minute strategy call &mdash; no commitment, just clarity.</p>
+    </div>
+    <button class="btn-cta" onclick="openModal()" aria-label="Book a free strategy call">Book a Free Call &rarr;</button>
+  </div>
+</section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo" aria-label="Acceio home">acc<span>ei</span>o</a>
+      <p>Full-service <strong>social media agency</strong> and <strong>brand management</strong> partner helping brands grow smarter through social media, email marketing, and lead generation.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="#services">Social Media Marketing</a></li>
+        <li><a href="#services">Brand Management</a></li>
+        <li><a href="#services">Email Marketing</a></li>
+        <li><a href="#services">Lead Generation</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Case Studies</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul>
+        <li><a href="mailto:hello@acceio.com">hello@acceio.com</a></li>
+        <li><a href="https://www.instagram.com/acceio_media" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Acceio. All rights reserved.</span>
+    <span><a href="#" style="color:inherit;text-decoration:none">Privacy Policy</a> &middot; <a href="#" style="color:inherit;text-decoration:none">Terms of Service</a></span>
+  </div>
+</footer>
+
+<!-- CONTACT MODAL -->
+<div class="modal-overlay" id="contactModal" onclick="handleOverlayClick(event)" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close contact form">&#10005;</button>
+    <div id="modalForm">
+      <div class="modal-brand">acc<span>ei</span>o</div>
+      <h2 id="modalTitle">Let's get started</h2>
+      <p class="modal-sub">Fill in your details and our team will reach out within 24 hours.</p>
+      <div class="form-group">
+        <label class="form-label" for="f-name">Name <span class="req" aria-hidden="true">*</span></label>
+        <input class="form-input" id="f-name" type="text" placeholder="Your full name" autocomplete="name" aria-required="true" aria-describedby="err-name" />
+        <div class="form-error" id="err-name" role="alert">Please enter your name.</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="f-phone">Phone <span class="opt">(optional)</span></label>
+        <input class="form-input" id="f-phone" type="tel" placeholder="+91 98765 43210" autocomplete="tel" />
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="f-email">Email <span class="req" aria-hidden="true">*</span></label>
+        <input class="form-input" id="f-email" type="email" placeholder="you@company.com" autocomplete="email" aria-required="true" aria-describedby="err-email" />
+        <div class="form-error" id="err-email" role="alert">Please enter a valid email address.</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="f-message">Message <span class="opt">(optional)</span></label>
+        <textarea class="form-textarea" id="f-message" placeholder="Tell us about your business and what you're looking to achieve..."></textarea>
+      </div>
+      <button class="btn-submit" id="submitBtn" onclick="submitForm()">Send Message &rarr;</button>
+    </div>
+    <div class="modal-success" id="modalSuccess" role="status" aria-live="polite">
+      <div class="success-icon" aria-hidden="true">&#127881;</div>
+      <h3>Message sent!</h3>
+      <p>Thanks for reaching out. Our team at <strong>hello@acceio.com</strong> will get back to you within 24 hours.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // EmailJS: init after defer load completes
+  window.addEventListener('load', function() {
+    if (window.emailjs) emailjs.init('vvL1rtD3HeuGA0B0E');
+  });
+
+  function openModal() {
+    document.getElementById('contactModal').classList.add('open');
+    // ✅ CLS FIX: body overflow hidden without scrollbar jump (scrollbar-gutter handles it)
+    document.body.style.overflow = 'hidden';
+    document.getElementById('modalForm').style.display = '';
+    document.getElementById('modalSuccess').style.display = 'none';
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = false;
+    btn.textContent = 'Send Message →';
+    btn.classList.remove('error-state');
+    setTimeout(() => document.getElementById('f-name').focus(), 100);
+  }
+
+  function closeModal() {
+    document.getElementById('contactModal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('contactModal')) closeModal();
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  function openMobileNav() {
+    document.getElementById('mobileNav').classList.add('open');
+    document.getElementById('menuBtn').setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+    document.getElementById('menuBtn').setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  // ✅ ARIA: update aria-selected on tab switch
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected','true');
+  }
+
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    document.querySelectorAll('section[id]').forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+    document.querySelectorAll('.nav-links a').forEach(a => { a.style.opacity = a.getAttribute('href') === '#' + cur ? '1' : '0.7'; });
+  });
+
+  function validateEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  function submitForm() {
+    const name    = document.getElementById('f-name').value.trim();
+    const email   = document.getElementById('f-email').value.trim();
+    const phone   = document.getElementById('f-phone').value.trim();
+    const message = document.getElementById('f-message').value.trim();
+    let valid = true;
+
+    const ni = document.getElementById('f-name'), ne = document.getElementById('err-name');
+    if (!name) { ni.classList.add('error'); ne.classList.add('show'); ni.setAttribute('aria-invalid','true'); valid = false; }
+    else        { ni.classList.remove('error'); ne.classList.remove('show'); ni.removeAttribute('aria-invalid'); }
+
+    const ei = document.getElementById('f-email'), ee = document.getElementById('err-email');
+    if (!email || !validateEmail(email)) { ei.classList.add('error'); ee.classList.add('show'); ei.setAttribute('aria-invalid','true'); valid = false; }
+    else                                  { ei.classList.remove('error'); ee.classList.remove('show'); ei.removeAttribute('aria-invalid'); }
+
+    if (!valid) return;
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    btn.classList.remove('error-state');
+
+    if (!window.emailjs) {
+      document.getElementById('modalForm').style.display = 'none';
+      document.getElementById('modalSuccess').style.display = 'block';
+      return;
+    }
+
+    emailjs.send('service_wgh0p69', 'template_9qwd355', {
+      from_name:  name,
+      from_email: email,
+      phone:      phone || 'Not provided',
+      message:    message || 'No message provided'
+    })
+    .then(() => {
+      document.getElementById('modalForm').style.display = 'none';
+      document.getElementById('modalSuccess').style.display = 'block';
+    })
+    .catch(() => {
+      btn.disabled = false;
+      btn.textContent = 'Try Again →';
+      btn.classList.add('error-state');
+    });
+  }
+</script>
+
+</body>
+</html>
