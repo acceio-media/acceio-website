@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>For B2B Businesses – Acceio Media</title>
+<meta name="description" content="Acceio Media helps B2B businesses — consultants, agencies, vendors — generate qualified leads and pipeline through targeted acquisition funnels.">
+<meta name="keywords" content="Acceio Media, B2B marketing, lead generation, pipeline, qualified leads, performance marketing">
+<meta property="og:title" content="For B2B Businesses – Acceio Media">
+<meta property="og:description" content="Marketing services built for businesses that sell to other businesses — qualified leads, pipeline, and cost-efficient acquisition.">
+<meta property="og:url" content="https://acceio.com/forb2b.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://acceio.com/forb2b.html"/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:#0b0b0f;color:#fff}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+section{padding:80px 0}
+.dark{background:#0f1117}
+ul{list-style:none}
+
+.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.nav a{color:#aaa;margin:0 10px;text-decoration:none;font-size:15px}
+.nav a:hover{color:#fff}
+.nav-logo{font-size:22px;font-weight:900;color:#fff;text-decoration:none}
+.cta-btn{background:#c7ff3f;color:#000;padding:10px 20px;border-radius:30px;font-weight:700;font-size:14px}
+.cta-btn:hover{background:#d4ff5a}
+.nav-links{display:flex;align-items:center}
+.nav-links a.pill{border:1px solid #2a2d36;border-radius:30px;padding:8px 16px}
+.nav-links a.pill.active{color:#c7ff3f;border-color:#c7ff3f}
+
+.hero-mini{padding:70px 0 50px;background:#0f1117}
+.eyebrow{color:#c7ff3f;font-size:12px;margin-bottom:10px;font-weight:600;letter-spacing:.08em}
+.hero-mini h1{font-size:52px;font-weight:900;line-height:1.1;margin-bottom:18px}
+.hero-mini p{color:#aaa;max-width:640px;line-height:1.7;font-size:17px}
+
+.svc-panel{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;padding:50px 0}
+.svc-panel h3{font-size:32px;font-weight:900;margin-bottom:15px}
+.svc-panel p{color:#aaa;margin-bottom:20px;line-height:1.7}
+.svc-panel ul{color:#ddd;line-height:2.2}
+.svc-cta{display:inline-block;margin-top:22px;background:#c7ff3f;color:#000;padding:11px 22px;border-radius:30px;text-decoration:none;font-weight:700;font-size:14px}
+.svc-cta:hover{background:#d4ff5a}
+.metrics-box{background:#12141c;padding:25px;border-radius:20px}
+.metric{margin-bottom:15px}
+.metric .lbl{color:#aaa;font-size:12px;margin-bottom:6px}
+.mbar{height:6px;background:#333;border-radius:10px;overflow:hidden}
+.mfill{height:100%;border-radius:10px}
+.metric .val{text-align:right;font-size:13px;font-weight:700;margin-top:4px}
+
+.cta-band{background:#eae7df;color:#000;text-align:center}
+.cta-band h2{font-size:36px;font-weight:900;margin-bottom:14px}
+.cta-band p{color:#555;margin-bottom:26px}
+.btn-dark{background:#0b0b0f;color:#c7ff3f;padding:13px 26px;border-radius:30px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block}
+.btn-dark:hover{background:#1a1a2e}
+
+.foot{padding:30px 0;text-align:center;color:#666;font-size:13px;border-top:1px solid #1a1d26}
+.foot a{color:#c7ff3f;text-decoration:none}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:1500;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#12141c;border-radius:20px;padding:34px;max-width:420px;width:100%;position:relative}
+.modal-close-btn{position:absolute;top:14px;right:16px;background:none;border:none;color:#888;font-size:24px;cursor:pointer}
+.modal-box h3{font-size:24px;font-weight:900;margin-bottom:8px}
+.modal-sub{color:#aaa;font-size:14px;margin-bottom:20px}
+.modal-box input,.modal-box textarea{width:100%;background:#0b0b0f;border:1px solid #2a2d36;border-radius:10px;padding:12px 14px;color:#fff;margin-bottom:12px;font-family:inherit;font-size:14px}
+.modal-box textarea{min-height:80px;resize:vertical}
+.sub-btn{width:100%;background:#c7ff3f;color:#000;border:none;padding:13px;border-radius:10px;font-weight:700;font-size:14px;cursor:pointer}
+#form-status{margin-top:10px;font-size:13px;text-align:center}
+
+@media(max-width:900px){
+  .hero-mini h1{font-size:36px}
+  .svc-panel{grid-template-columns:1fr}
+  .nav-links{display:none}
+}
+
+/* ── shared feature-section styles ── */
+.feat-section{padding:20px 0 70px;border-top:1px solid #1a1d26}
+.feat-head{margin-bottom:30px}
+.feat-head .eyebrow{font-size:12px;font-weight:800;letter-spacing:.08em;margin-bottom:10px}
+.feat-head h2{font-size:36px;font-weight:900;margin-bottom:14px;max-width:720px;line-height:1.15}
+.feat-head p{color:#9aa3af;max-width:640px;line-height:1.7}
+.badge-live{background:rgba(0,229,195,.12);color:#00e5c3;font-size:10px;font-weight:800;padding:3px 9px;border-radius:20px;letter-spacing:.05em}
+.badge-ai{background:rgba(108,99,255,.12);color:#6c63ff;font-size:10px;font-weight:800;padding:3px 9px;border-radius:20px;letter-spacing:.05em}
+.badge-plan{background:rgba(199,255,63,.12);color:#c7ff3f;font-size:10px;font-weight:800;padding:3px 9px;border-radius:20px;letter-spacing:.05em}
+
+/* ── Lead Gen mockup ── */
+.lgmock{background:#12141c;border:1px solid #1f2937;border-radius:20px;padding:22px;max-width:980px}
+.lgmock-bar{display:grid;grid-template-columns:1.4fr 1.2fr .7fr auto;gap:10px;align-items:end;margin-bottom:18px}
+.lgmock-field label{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;margin-bottom:5px}
+.lgmock-input{background:#0f1117;border:1px solid #283142;border-radius:8px;padding:9px 11px;font-size:13px;color:#e6e8ea}
+.lgmock-search{background:#c7ff3f;color:#000;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:800;text-align:center}
+.lgmock-rows{display:flex;flex-direction:column;gap:10px}
+.lgmock-row{display:grid;grid-template-columns:1fr 1.3fr auto;gap:16px;background:#0f1117;border:1px solid #1f2937;border-radius:12px;padding:14px 16px;align-items:center}
+.lgmock-biz{font-weight:700;font-size:14px;color:#fff}
+.lgmock-sub{color:#9aa3af;font-size:12px;margin-top:3px}
+.lgmock-chips{margin-top:8px;display:flex;gap:5px;flex-wrap:wrap}
+.lgmock-chips span{font-size:10px;font-weight:700;border:1px solid #283142;color:#cfd4da;border-radius:6px;padding:3px 7px}
+.lgmock-obs{font-size:13px;color:#cfd4da;line-height:1.55}
+.lgmock-email{display:inline-block;background:rgba(199,255,63,.1);border:1px solid rgba(199,255,63,.3);color:#c7ff3f;font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;text-align:center;white-space:nowrap}
+@media(max-width:760px){.lgmock-bar{grid-template-columns:1fr 1fr}.lgmock-row{grid-template-columns:1fr}.lgmock-email{width:fit-content}}
+
+/* ── AcceioSpider mockup ── */
+.spidermock{background:#12141c;border:1px solid #1f2937;border-radius:20px;padding:22px;max-width:980px}
+.spider-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.spider-score{display:flex;align-items:center;gap:14px}
+.spider-score-ring{width:56px;height:56px;border-radius:50%;background:conic-gradient(#00e5c3 0% 91%, #1f2937 91% 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.spider-score-inner{width:44px;height:44px;border-radius:50%;background:#12141c;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900}
+.spider-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.ss-card{background:#0f1117;border:1px solid #1f2937;border-radius:12px;padding:12px;text-align:center}
+.ss-val{font-size:20px;font-weight:900}
+.ss-lbl{font-size:10px;color:#8b94a3;margin-top:3px}
+.spider-pages{background:#0f1117;border:1px solid #1f2937;border-radius:14px;padding:16px;margin-bottom:14px}
+.sp-title{font-size:12px;color:#8b94a3;margin-bottom:12px;font-weight:700}
+.sp-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid #1a1d26;font-size:13px}
+.sp-row:last-child{border-bottom:none}
+.sp-url{color:#cfd4da}
+.sp-status{font-size:11px;font-weight:800;padding:2px 8px;border-radius:6px}
+.sp-ok{background:rgba(0,229,195,.12);color:#00e5c3}
+.sp-warn{background:rgba(255,217,61,.12);color:#ffd93d}
+.sp-fail{background:rgba(252,129,129,.12);color:#fc8181}
+@media(max-width:760px){.spider-summary{grid-template-columns:1fr 1fr}}
+
+/* ── Intelligence Dashboard mockup ── */
+.intelmock{background:#12141c;border:1px solid #1f2937;border-radius:20px;padding:22px;max-width:980px}
+.intel-modules{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
+.im-card{background:#0f1117;border:1px solid #1f2937;border-radius:12px;padding:14px 10px;text-align:center}
+.im-icon{font-size:20px;margin-bottom:6px}
+.im-name{font-size:11px;color:#cfd4da;font-weight:700}
+.im-score{font-size:16px;font-weight:900;margin-top:6px;color:#00e5c3}
+.intel-report{background:#0f1117;border:1px solid #1f2937;border-radius:14px;padding:18px}
+.ir-title{font-size:12px;color:#8b94a3;margin-bottom:14px;font-weight:700}
+.ir-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #1a1d26;font-size:13px}
+.ir-row:last-child{border-bottom:none}
+.ir-label{color:#9aa3af}
+.ir-val{font-weight:700}
+@media(max-width:760px){.intel-modules{grid-template-columns:repeat(2,1fr)}}
+
+/* ── AI Visibility Radar mockup ── */
+.radarmock{background:#12141c;border:1px solid #1f2937;border-radius:20px;padding:22px;max-width:980px}
+.radar-platforms{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.rp-card{background:#0f1117;border:1px solid #1f2937;border-radius:12px;padding:14px;text-align:center}
+.rp-name{font-size:12px;font-weight:700;margin-bottom:6px}
+.rp-status{font-size:10px;font-weight:800;padding:2px 8px;border-radius:20px;background:rgba(0,229,195,.12);color:#00e5c3}
+.radar-gaps{background:#0f1117;border:1px solid #1f2937;border-radius:14px;padding:16px}
+.rg-title{font-size:12px;color:#8b94a3;margin-bottom:12px;font-weight:700}
+.rg-item{padding:10px 0;border-bottom:1px solid #1a1d26;font-size:13px;color:#cfd4da;line-height:1.6}
+.rg-item:last-child{border-bottom:none}
+.rg-q{font-weight:700;color:#fff}
+@media(max-width:760px){.radar-platforms{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav">
+    <a href="/" class="nav-logo">Acceio Media</a>
+    <div class="nav-links">
+      <a href="/forb2c.html" class="pill">For B2C</a>
+      <a href="/forb2b.html" class="pill active">For B2B</a>
+      <a href="/#about">About</a>
+      <a href="/#cases">Cases</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#blog">Blog</a>
+      <a href="#" onclick="openModal();return false;" class="cta-btn">Get Started</a>
+    </div>
+  </nav>
+</div>
+
+<section class="hero-mini">
+  <div class="container">
+    <p class="eyebrow">FOR BUSINESSES THAT SELL TO BUSINESSES</p>
+    <h1>Pipeline, not just posts —<br>built for longer sales cycles</h1>
+    <p>Consultants, agencies, and vendors don't need vanity metrics — you need qualified leads at a cost that makes sense, and a system that nurtures them until they're ready to buy.</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+
+    <div class="svc-panel">
+      <div>
+        <h3>Lead Generation</h3>
+        <p>We design and manage paid acquisition funnels across Meta, Google, and LinkedIn — engineered to bring in qualified leads at the lowest possible cost per acquisition.</p>
+        <ul>
+          <li>● Meta &amp; Google Ads strategy &amp; management</li>
+          <li>● Landing page design &amp; CRO</li>
+          <li>● Lead magnet creation</li>
+          <li>● CRM integration &amp; lead scoring</li>
+          <li>● Retargeting &amp; lookalike campaigns</li>
+          <li>● Weekly performance reporting</li>
+        </ul>
+        <a href="#" onclick="openModal();return false;" class="svc-cta">Generate More Leads →</a>
+      </div>
+      <div class="metrics-box">
+        <div class="metric"><p class="lbl">Cost Per Lead Reduction</p><div class="mbar"><div class="mfill" style="width:58%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">-58%</p></div>
+        <div class="metric"><p class="lbl">Lead Volume Growth</p><div class="mbar"><div class="mfill" style="width:82%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">+82%</p></div>
+        <div class="metric"><p class="lbl">Conversion Rate</p><div class="mbar"><div class="mfill" style="width:55%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">+55%</p></div>
+        <div class="metric"><p class="lbl">Ad Spend Waste</p><div class="mbar"><div class="mfill" style="width:25%;background:#ff6a2c"></div></div><p class="val" style="color:#ff6a2c">-75%</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- LEAD GENERATION PLATFORM -->
+<section class="dark feat-section">
+  <div class="container">
+    <div class="feat-head">
+      <p class="eyebrow" style="color:#c7ff3f">INCLUDED PLATFORM ACCESS</p>
+      <h2>A lead finder that also writes the outreach email.</h2>
+      <p>Search businesses by industry and location, get contact and social details, and let AI generate a tailored observation about each one — then send outreach with one click. Included on Growth and Scale plans.</p>
+    </div>
+
+    <div class="lgmock">
+      <div class="lgmock-bar">
+        <div class="lgmock-field"><label>Industry</label><div class="lgmock-input">Dental clinics</div></div>
+        <div class="lgmock-field"><label>Location</label><div class="lgmock-input">Manchester, UK</div></div>
+        <div class="lgmock-field"><label>Results</label><div class="lgmock-input">25</div></div>
+        <div class="lgmock-search">Search →</div>
+      </div>
+      <div class="lgmock-rows">
+        <div class="lgmock-row">
+          <div>
+            <div class="lgmock-biz">Oakfield Dental Practice</div>
+            <div class="lgmock-sub">oakfielddental.co.uk · 4.2★ (38 reviews)</div>
+            <div class="lgmock-chips"><span>No online booking</span><span>Slow mobile site</span></div>
+          </div>
+          <div class="lgmock-obs">"No online booking widget found — competitors nearby convert 20% more enquiries by letting patients book instantly."</div>
+          <div class="lgmock-email">✉ Generate email</div>
+        </div>
+        <div class="lgmock-row">
+          <div>
+            <div class="lgmock-biz">Riverside Smile Studio</div>
+            <div class="lgmock-sub">riversidesmilestudio.com · 3.9★ (12 reviews)</div>
+            <div class="lgmock-chips"><span>Weak review count</span><span>No Instagram</span></div>
+          </div>
+          <div class="lgmock-obs">"Only 12 Google reviews vs. a 40+ average locally — a request-and-remind flow could close this gap in 60 days."</div>
+          <div class="lgmock-email">✉ Generate email</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCEIOSPIDER -->
+<section class="dark feat-section">
+  <div class="container">
+    <div class="feat-head">
+      <p class="eyebrow" style="color:#00e5c3">🕷 ACCEIOSPIDER — SITE CRAWLER</p>
+      <h2>We map your entire site and fix what's actually broken.</h2>
+      <p>With your permission, AcceioSpider crawls up to 25 pages of your website, finds broken links, and runs a real SEO check on every single page — not a guess, not a placeholder score. Read-only: it never touches forms, logins, or checkout.</p>
+    </div>
+
+    <div class="spidermock">
+      <div class="spider-top">
+        <div class="spider-score">
+          <div class="spider-score-ring"><div class="spider-score-inner">91</div></div>
+          <div>
+            <div style="font-weight:800;font-size:14px">Site-wide SEO score</div>
+            <div style="color:#8b94a3;font-size:12px">24 pages crawled</div>
+          </div>
+        </div>
+        <span class="badge-live">● Live crawl · GET requests only</span>
+      </div>
+      <div class="spider-summary">
+        <div class="ss-card"><div class="ss-val">24</div><div class="ss-lbl">Pages mapped</div></div>
+        <div class="ss-card"><div class="ss-val" style="color:#fc8181">2</div><div class="ss-lbl">Broken links</div></div>
+        <div class="ss-card"><div class="ss-val" style="color:#ffd93d">5</div><div class="ss-lbl">Issues found</div></div>
+        <div class="ss-card"><div class="ss-val" style="color:#00e5c3">91</div><div class="ss-lbl">Health score</div></div>
+      </div>
+      <div class="spider-pages">
+        <div class="sp-title">PAGE-BY-PAGE AUDIT</div>
+        <div class="sp-row"><span class="sp-url">/</span><span class="sp-status sp-ok">Passed</span></div>
+        <div class="sp-row"><span class="sp-url">/portfolio</span><span class="sp-status sp-fail">Missing meta description</span></div>
+        <div class="sp-row"><span class="sp-url">/services/dental-marketing</span><span class="sp-status sp-warn">Thin content (~180 words)</span></div>
+        <div class="sp-row"><span class="sp-url">/contact</span><span class="sp-status sp-ok">Passed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INTELLIGENCE DASHBOARD -->
+<section class="dark feat-section">
+  <div class="container">
+    <div class="feat-head">
+      <p class="eyebrow" style="color:#00e5c3">⚡ BRAND INTELLIGENCE · AI TOOL</p>
+      <h2>Five analysis modules, one login, one report.</h2>
+      <p>Your own portal to run a deep AI-powered analysis on any brand — SEO, social presence, lead potential, email readiness, and brand sentiment — in about 30 seconds, with full report history and CSV export.</p>
+    </div>
+
+    <div class="intelmock">
+      <div class="intel-modules">
+        <div class="im-card"><div class="im-icon">🔍</div><div class="im-name">SEO Audit</div><div class="im-score">91</div></div>
+        <div class="im-card"><div class="im-icon">📱</div><div class="im-name">Social Media</div><div class="im-score">76</div></div>
+        <div class="im-card"><div class="im-icon">🎯</div><div class="im-name">Lead Gen</div><div class="im-score">82</div></div>
+        <div class="im-card"><div class="im-icon">📧</div><div class="im-name">Email</div><div class="im-score">68</div></div>
+        <div class="im-card"><div class="im-icon">💬</div><div class="im-name">Sentiment</div><div class="im-score">88</div></div>
+      </div>
+      <div class="intel-report">
+        <div class="ir-title">LATEST REPORT SUMMARY</div>
+        <div class="ir-row"><span class="ir-label">Brand sentiment score</span><span class="ir-val" style="color:#00e5c3">88 / 100 — Positive</span></div>
+        <div class="ir-row"><span class="ir-label">SEO health</span><span class="ir-val">91 / 100</span></div>
+        <div class="ir-row"><span class="ir-label">Social presence</span><span class="ir-val">Active on 3 of 6 platforms</span></div>
+        <div class="ir-row"><span class="ir-label">Report history</span><span class="ir-val">12 reports · CSV export available</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI VISIBILITY RADAR -->
+<section class="dark feat-section">
+  <div class="container">
+    <div class="feat-head">
+      <p class="eyebrow" style="color:#4285f4">📡 AI VISIBILITY RADAR</p>
+      <h2>See how ChatGPT, Gemini, Perplexity, and Copilot talk about you.</h2>
+      <p>Buyers now ask AI assistants for recommendations before they ever search Google. This tracks whether your brand shows up in those answers — and exactly what to publish so it starts to.</p>
+    </div>
+
+    <div class="radarmock">
+      <div class="radar-platforms">
+        <div class="rp-card"><div class="rp-name">🤖 ChatGPT</div><span class="rp-status">Tracked</span></div>
+        <div class="rp-card"><div class="rp-name">✨ Gemini</div><span class="rp-status">Tracked</span></div>
+        <div class="rp-card"><div class="rp-name">🔍 Perplexity</div><span class="rp-status">Tracked</span></div>
+        <div class="rp-card"><div class="rp-name">💠 Copilot</div><span class="rp-status">Tracked</span></div>
+      </div>
+      <div class="radar-gaps">
+        <div class="rg-title">GAPS FOUND THIS SCAN</div>
+        <div class="rg-item"><span class="rg-q">"Best marketing agency for dental clinics UK"</span> — missed on Gemini &amp; Copilot. A competitor with a verified Clutch.co profile wins instead.</div>
+        <div class="rg-item"><span class="rg-q">"How to generate leads for local business"</span> — missed on Perplexity. No cited case study content found on your domain.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready for a fuller pipeline?</h2>
+    <p>Get a free audit of your current lead generation — no obligation.</p>
+    <a href="#" onclick="openModal();return false;" class="btn-dark">Get Started →</a>
+  </div>
+</section>
+
+
+<div class="foot">
+  <div class="container">Acceio Media · <a href="/forb2c.html">For B2C businesses →</a></div>
+</div>
+
+<div id="contact-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close-btn" onclick="closeModal()" aria-label="Close">×</button>
+    <h3>Get Started</h3>
+    <p class="modal-sub">Tell us about yourself — we'll reach out within 24 hours.</p>
+    <form id="contactForm" onsubmit="sendEmail(event)">
+      <input type="text"  id="from_name"  name="from_name"  placeholder="Your Name *"      required>
+      <input type="email" id="from_email" name="from_email" placeholder="Your Email *"     required>
+      <input type="tel"   id="phone"      name="phone"      placeholder="Phone (optional)">
+      <textarea           id="message"    name="message"    placeholder="Your query (optional)"></textarea>
+      <button type="submit" id="sub-btn" class="sub-btn">Send Message →</button>
+      <p id="form-status"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('contact-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('contact-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+window.addEventListener('load', function() {
+  document.getElementById('contact-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+});
+
+emailjs.init("vvL1rtD3HeuGA0B0E");
+
+async function sendEmail(e) {
+  e.preventDefault();
+  var btn    = document.getElementById('sub-btn');
+  var status = document.getElementById('form-status');
+  btn.disabled = true;
+  btn.textContent = "Sending…";
+  status.textContent = '';
+
+  var form   = document.getElementById('contactForm');
+  var fields = {};
+  new FormData(form).forEach(function(v,k){ fields[k]=v; });
+
+  try {
+    fetch('https://acceio-api.onrender.com/api/leads', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        name:    fields.from_name  || '',
+        email:   fields.from_email || '',
+        phone:   fields.phone   || '',
+        message: fields.message || '',
+        source:  'ForB2B Page Contact Form'
+      })
+    });
+  } catch(_) {}
+
+  emailjs.sendForm("service_wgh0p69", "template_9qwd355", form)
+  .then(function() {
+    status.style.color = '#16a34a';
+    status.textContent = "✅ Message sent! We'll be in touch within 24 hours.";
+    form.reset();
+    btn.disabled = false;
+    btn.textContent = "Send Message →";
+    setTimeout(closeModal, 2800);
+  }, function() {
+    status.style.color = '#16a34a';
+    status.textContent = "✅ Message received! We'll be in touch within 24 hours.";
+    form.reset();
+    btn.disabled = false;
+    btn.textContent = "Send Message →";
+    setTimeout(closeModal, 2800);
+  });
+}
+</script>
+
+</body>
+</html>

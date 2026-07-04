@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>For B2C Businesses – Acceio Media</title>
+<meta name="description" content="Acceio Media helps consumer-facing businesses — clinics, salons, restaurants, retail — grow through social media marketing, brand management, and email marketing.">
+<meta name="keywords" content="Acceio Media, B2C marketing, social media growth, brand management, email marketing, local business marketing">
+<meta property="og:title" content="For B2C Businesses – Acceio Media">
+<meta property="og:description" content="Marketing services built for businesses that sell to consumers — social media, brand, and email marketing that turns visitors into customers.">
+<meta property="og:url" content="https://acceio.com/forb2c.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://acceio.com/forb2c.html"/>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"></noscript>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:#0b0b0f;color:#fff}
+.container{max-width:1200px;margin:auto;padding:0 20px}
+section{padding:80px 0}
+.dark{background:#0f1117}
+ul{list-style:none}
+
+.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.nav a{color:#aaa;margin:0 10px;text-decoration:none;font-size:15px}
+.nav a:hover{color:#fff}
+.nav-logo{font-size:22px;font-weight:900;color:#fff;text-decoration:none}
+.cta-btn{background:#c7ff3f;color:#000;padding:10px 20px;border-radius:30px;font-weight:700;font-size:14px}
+.cta-btn:hover{background:#d4ff5a}
+.nav-links{display:flex;align-items:center}
+.nav-links a.pill{border:1px solid #2a2d36;border-radius:30px;padding:8px 16px}
+.nav-links a.pill.active{color:#c7ff3f;border-color:#c7ff3f}
+.mobile-toggle{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
+
+.hero-mini{padding:70px 0 50px;background:#0f1117}
+.eyebrow{color:#c7ff3f;font-size:12px;margin-bottom:10px;font-weight:600;letter-spacing:.08em}
+.hero-mini h1{font-size:52px;font-weight:900;line-height:1.1;margin-bottom:18px}
+.hero-mini p{color:#aaa;max-width:640px;line-height:1.7;font-size:17px}
+
+.svc-panel{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;padding:50px 0;border-top:1px solid #1a1d26}
+.svc-panel:first-of-type{border-top:none}
+.svc-panel h3{font-size:32px;font-weight:900;margin-bottom:15px}
+.svc-panel p{color:#aaa;margin-bottom:20px;line-height:1.7}
+.svc-panel ul{color:#ddd;line-height:2.2}
+.svc-cta{display:inline-block;margin-top:22px;background:#c7ff3f;color:#000;padding:11px 22px;border-radius:30px;text-decoration:none;font-weight:700;font-size:14px}
+.svc-cta:hover{background:#d4ff5a}
+.metrics-box{background:#12141c;padding:25px;border-radius:20px}
+.metric{margin-bottom:15px}
+.metric .lbl{color:#aaa;font-size:12px;margin-bottom:6px}
+.mbar{height:6px;background:#333;border-radius:10px;overflow:hidden}
+.mfill{height:100%;border-radius:10px}
+.metric .val{text-align:right;font-size:13px;font-weight:700;margin-top:4px}
+
+.cta-band{background:#eae7df;color:#000;text-align:center}
+.cta-band h2{font-size:36px;font-weight:900;margin-bottom:14px}
+.cta-band p{color:#555;margin-bottom:26px}
+.btn-dark{background:#0b0b0f;color:#c7ff3f;padding:13px 26px;border-radius:30px;text-decoration:none;font-weight:700;font-size:14px;display:inline-block}
+.btn-dark:hover{background:#1a1a2e}
+
+.foot{padding:30px 0;text-align:center;color:#666;font-size:13px;border-top:1px solid #1a1d26}
+.foot a{color:#c7ff3f;text-decoration:none}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.8);z-index:1500;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.open{display:flex}
+.modal-box{background:#12141c;border-radius:20px;padding:34px;max-width:420px;width:100%;position:relative}
+.modal-close-btn{position:absolute;top:14px;right:16px;background:none;border:none;color:#888;font-size:24px;cursor:pointer}
+.modal-box h3{font-size:24px;font-weight:900;margin-bottom:8px}
+.modal-sub{color:#aaa;font-size:14px;margin-bottom:20px}
+.modal-box input,.modal-box textarea{width:100%;background:#0b0b0f;border:1px solid #2a2d36;border-radius:10px;padding:12px 14px;color:#fff;margin-bottom:12px;font-family:inherit;font-size:14px}
+.modal-box textarea{min-height:80px;resize:vertical}
+.sub-btn{width:100%;background:#c7ff3f;color:#000;border:none;padding:13px;border-radius:10px;font-weight:700;font-size:14px;cursor:pointer}
+#form-status{margin-top:10px;font-size:13px;text-align:center}
+
+@media(max-width:900px){
+  .hero-mini h1{font-size:36px}
+  .svc-panel{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .mobile-toggle{display:block}
+}
+
+/* ── Growth Dashboard mockup ── */
+.dash-section{padding:20px 0 70px}
+.dash-head{margin-bottom:34px}
+.dash-head .eyebrow{color:#00e5c3}
+.dash-head h2{font-size:38px;font-weight:900;margin-bottom:14px;max-width:720px;line-height:1.15}
+.dash-head p{color:#9aa3af;max-width:640px;line-height:1.7}
+.dashmock{background:#12141c;border:1px solid #1f2937;border-radius:20px;padding:26px;max-width:980px}
+.dashmock-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.dashmock-client{font-weight:800;font-size:15px}
+.dashmock-sub{color:#6b7280;font-size:12px;margin-top:2px}
+.badge-live{background:rgba(0,229,195,.12);color:#00e5c3;font-size:10px;font-weight:800;padding:3px 9px;border-radius:20px;letter-spacing:.05em}
+.badge-est{background:rgba(255,106,44,.12);color:#ff6a2c;font-size:10px;font-weight:800;padding:3px 9px;border-radius:20px;letter-spacing:.05em}
+.dashmock-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px}
+.dk-card{background:#0f1117;border:1px solid #1f2937;border-radius:14px;padding:16px}
+.dk-label{color:#8b94a3;font-size:11px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.dk-val{font-size:26px;font-weight:900}
+.dk-delta{font-size:12px;font-weight:700;margin-top:4px}
+.dk-up{color:#00e5c3}
+.dashmock-funnel{background:#0f1117;border:1px solid #1f2937;border-radius:14px;padding:18px;margin-bottom:14px}
+.df-title{font-size:12px;color:#8b94a3;margin-bottom:14px;font-weight:700}
+.df-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.df-row:last-child{margin-bottom:0}
+.df-name{width:130px;font-size:12px;color:#cfd4da;flex-shrink:0}
+.df-bar-wrap{flex:1;background:#1a1d26;border-radius:10px;height:10px;overflow:hidden}
+.df-bar{height:100%;border-radius:10px;background:linear-gradient(90deg,#00e5c3,#c7ff3f)}
+.df-count{width:44px;text-align:right;font-size:13px;font-weight:800}
+.dashmock-recs{background:#0f1117;border:1px solid #1f2937;border-radius:14px;padding:18px}
+.rec-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid #1a1d26;font-size:13px;color:#cfd4da;line-height:1.5}
+.rec-item:last-child{border-bottom:none;padding-bottom:0}
+.rec-tag2{flex-shrink:0;font-size:10px;font-weight:800;padding:3px 8px;border-radius:6px;background:rgba(255,106,44,.12);color:#ff6a2c;height:fit-content}
+@media(max-width:760px){
+  .dashmock-kpis{grid-template-columns:1fr 1fr}
+  .df-name{width:90px}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <nav class="nav">
+    <a href="/" class="nav-logo">Acceio Media</a>
+    <div class="nav-links">
+      <a href="/forb2c.html" class="pill active">For B2C</a>
+      <a href="/forb2b.html" class="pill">For B2B</a>
+      <a href="/#about">About</a>
+      <a href="/#cases">Cases</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#blog">Blog</a>
+      <a href="#" onclick="openModal();return false;" class="cta-btn">Get Started</a>
+    </div>
+  </nav>
+</div>
+
+<section class="hero-mini">
+  <div class="container">
+    <p class="eyebrow">FOR CONSUMER-FACING BUSINESSES</p>
+    <h1>Marketing built to bring<br>customers through the door</h1>
+    <p>Clinics, salons, restaurants, gyms, and retail brands don't need SEO scores — they need more calls, more chats, and more walk-ins. Here's how we get you there.</p>
+  </div>
+</section>
+
+<section class="dark dash-section">
+  <div class="container">
+    <div class="dash-head">
+      <p class="eyebrow">INCLUDED PLATFORM ACCESS</p>
+      <h2>Not just marketing — a live dashboard your business owner will actually check.</h2>
+      <p>Every B2C client gets a Growth Dashboard: one link, no login friction, showing exactly what's happening between a stranger seeing your ad and becoming a customer. No SEO scores, no vanity metrics — just visitors, chats, and customers.</p>
+    </div>
+
+    <div class="dashmock">
+      <div class="dashmock-top">
+        <div>
+          <div class="dashmock-client">Bright Smile Dental — Croydon</div>
+          <div class="dashmock-sub">Last 30 days</div>
+        </div>
+        <span class="badge-live">● LIVE DATA</span>
+      </div>
+
+      <div class="dashmock-kpis">
+        <div class="dk-card">
+          <div class="dk-label">Website visitors <span class="badge-live">Live</span></div>
+          <div class="dk-val">4,210</div>
+          <div class="dk-delta dk-up">▲ 12%</div>
+        </div>
+        <div class="dk-card">
+          <div class="dk-label">WhatsApp enquiries <span class="badge-live">Live</span></div>
+          <div class="dk-val">81</div>
+          <div class="dk-delta dk-up">▲ 18%</div>
+        </div>
+        <div class="dk-card">
+          <div class="dk-label">New Google reviews <span class="badge-live">Live</span></div>
+          <div class="dk-val">9 <span style="font-size:14px;color:#ffd93d">★4.7</span></div>
+          <div class="dk-delta dk-up">▲ 5</div>
+        </div>
+        <div class="dk-card">
+          <div class="dk-label">"Near me" ranking <span class="badge-live">Live</span></div>
+          <div class="dk-val">#3</div>
+          <div class="dk-delta dk-up">▲ 3 spots</div>
+        </div>
+        <div class="dk-card">
+          <div class="dk-label">New patients <span class="badge-est">Est</span></div>
+          <div class="dk-val">28</div>
+          <div class="dk-delta dk-up">▲ 6</div>
+        </div>
+        <div class="dk-card">
+          <div class="dk-label">Missed calls recovered <span class="badge-live">Live</span></div>
+          <div class="dk-val">7</div>
+          <div class="dk-delta dk-up">▲ 3</div>
+        </div>
+      </div>
+
+      <div class="dashmock-funnel">
+        <div class="df-title">VISITOR → CUSTOMER FUNNEL</div>
+        <div class="df-row"><div class="df-name">Website visitors</div><div class="df-bar-wrap"><div class="df-bar" style="width:100%"></div></div><div class="df-count">4,210</div></div>
+        <div class="df-row"><div class="df-name">Called / chatted</div><div class="df-bar-wrap"><div class="df-bar" style="width:32%"></div></div><div class="df-count">320</div></div>
+        <div class="df-row"><div class="df-name">WhatsApp chats</div><div class="df-bar-wrap"><div class="df-bar" style="width:19%"></div></div><div class="df-count">81</div></div>
+        <div class="df-row"><div class="df-name">New patients</div><div class="df-bar-wrap"><div class="df-bar" style="width:7%"></div></div><div class="df-count">28</div></div>
+      </div>
+
+      <div class="dashmock-recs">
+        <div class="df-title">WHAT TO DO NEXT — FOUND BY SCANNING VS. NEARBY COMPETITORS</div>
+        <div class="rec-item"><span class="rec-tag2">Missed opportunity</span>A nearby clinic ranks #1 for "emergency dentist" — you have no emergency page. ~190 searches/month locally.</div>
+        <div class="rec-item"><span class="rec-tag2">Reviews</span>You have 9 fewer reviews than the top-ranked clinic. Auto-request a review after every visit to close the gap.</div>
+        <div class="rec-item"><span class="rec-tag2">Speed</span>Your site loads in 4.1s on mobile — visitors leave after 3s. A fix could recover ~12% of leads.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="container">
+
+    <div class="svc-panel">
+      <div>
+        <h3>Social Media Marketing</h3>
+        <p>We grow your brand's presence across Instagram, Facebook, LinkedIn, and X with data-driven content strategies that turn followers into customers.</p>
+        <ul>
+          <li>● Content calendar creation &amp; scheduling</li>
+          <li>● Platform-specific creatives</li>
+          <li>● Community management &amp; DM handling</li>
+          <li>● Monthly analytics &amp; performance reports</li>
+          <li>● Influencer outreach &amp; partnerships</li>
+          <li>● Paid social ad management</li>
+        </ul>
+        <a href="#" onclick="openModal();return false;" class="svc-cta">Get a Free Audit →</a>
+      </div>
+      <div class="metrics-box">
+        <div class="metric"><p class="lbl">Avg. Engagement Lift</p><div class="mbar"><div class="mfill" style="width:78%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">+78%</p></div>
+        <div class="metric"><p class="lbl">Follower Growth</p><div class="mbar"><div class="mfill" style="width:65%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">+65%</p></div>
+        <div class="metric"><p class="lbl">Reach per Post</p><div class="mbar"><div class="mfill" style="width:50%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">3.2x</p></div>
+        <div class="metric"><p class="lbl">Cost per Engagement</p><div class="mbar"><div class="mfill" style="width:30%;background:#ff6a2c"></div></div><p class="val" style="color:#ff6a2c">-55%</p></div>
+      </div>
+    </div>
+
+    <div class="svc-panel">
+      <div>
+        <h3>Brand Management</h3>
+        <p>We define, protect, and evolve your brand identity — from visual guidelines to tone of voice — so every touchpoint builds trust and recognition at scale.</p>
+        <ul>
+          <li>● Full brand identity &amp; style guide creation</li>
+          <li>● Competitor brand audits</li>
+          <li>● Reputation monitoring &amp; ORM</li>
+          <li>● Cross-channel brand consistency</li>
+          <li>● Rebranding strategy &amp; rollout</li>
+          <li>● Brand storytelling &amp; positioning</li>
+        </ul>
+        <a href="#" onclick="openModal();return false;" class="svc-cta">Talk Brand Strategy →</a>
+      </div>
+      <div class="metrics-box">
+        <div class="metric"><p class="lbl">Brand Recall Lift</p><div class="mbar"><div class="mfill" style="width:72%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">+72%</p></div>
+        <div class="metric"><p class="lbl">Share of Voice Growth</p><div class="mbar"><div class="mfill" style="width:58%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">+58%</p></div>
+        <div class="metric"><p class="lbl">LinkedIn Follower Growth</p><div class="mbar"><div class="mfill" style="width:100%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">2x in 90 days</p></div>
+        <div class="metric"><p class="lbl">Negative Sentiment</p><div class="mbar"><div class="mfill" style="width:20%;background:#ff6a2c"></div></div><p class="val" style="color:#ff6a2c">-80%</p></div>
+      </div>
+    </div>
+
+    <div class="svc-panel">
+      <div>
+        <h3>Email Marketing</h3>
+        <p>From welcome sequences to winback campaigns, we build automated email ecosystems that nurture leads, retain customers, and generate revenue on autopilot.</p>
+        <ul>
+          <li>● Full drip sequence design &amp; copy</li>
+          <li>● List segmentation &amp; hygiene</li>
+          <li>● A/B testing subject lines &amp; CTAs</li>
+          <li>● Abandoned cart &amp; re-engagement flows</li>
+          <li>● Monthly newsletter campaigns</li>
+          <li>● ESP setup: Klaviyo, Mailchimp, ActiveCampaign</li>
+        </ul>
+        <a href="#" onclick="openModal();return false;" class="svc-cta">Start a Campaign →</a>
+      </div>
+      <div class="metrics-box">
+        <div class="metric"><p class="lbl">Average Open Rate</p><div class="mbar"><div class="mfill" style="width:44%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">44% (was 12%)</p></div>
+        <div class="metric"><p class="lbl">Click-Through Rate</p><div class="mbar"><div class="mfill" style="width:60%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">+3.1x</p></div>
+        <div class="metric"><p class="lbl">Revenue from Email</p><div class="mbar"><div class="mfill" style="width:68%;background:#c7ff3f"></div></div><p class="val" style="color:#c7ff3f">+68%</p></div>
+        <div class="metric"><p class="lbl">Unsubscribe Rate</p><div class="mbar"><div class="mfill" style="width:15%;background:#ff6a2c"></div></div><p class="val" style="color:#ff6a2c">-85%</p></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Ready to bring more customers in?</h2>
+    <p>Get a free audit of your current marketing — no obligation.</p>
+    <a href="#" onclick="openModal();return false;" class="btn-dark">Get Started →</a>
+  </div>
+</section>
+
+<div class="foot">
+  <div class="container">Acceio Media · <a href="/forb2b.html">For B2B businesses →</a></div>
+</div>
+
+<div id="contact-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close-btn" onclick="closeModal()" aria-label="Close">×</button>
+    <h3>Get Started</h3>
+    <p class="modal-sub">Tell us about yourself — we'll reach out within 24 hours.</p>
+    <form id="contactForm" onsubmit="sendEmail(event)">
+      <input type="text"  id="from_name"  name="from_name"  placeholder="Your Name *"      required>
+      <input type="email" id="from_email" name="from_email" placeholder="Your Email *"     required>
+      <input type="tel"   id="phone"      name="phone"      placeholder="Phone (optional)">
+      <textarea           id="message"    name="message"    placeholder="Your query (optional)"></textarea>
+      <button type="submit" id="sub-btn" class="sub-btn">Send Message →</button>
+      <p id="form-status"></p>
+    </form>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('contact-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('contact-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+window.addEventListener('load', function() {
+  document.getElementById('contact-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+});
+
+emailjs.init("vvL1rtD3HeuGA0B0E");
+
+async function sendEmail(e) {
+  e.preventDefault();
+  var btn    = document.getElementById('sub-btn');
+  var status = document.getElementById('form-status');
+  btn.disabled = true;
+  btn.textContent = "Sending…";
+  status.textContent = '';
+
+  var form   = document.getElementById('contactForm');
+  var fields = {};
+  new FormData(form).forEach(function(v,k){ fields[k]=v; });
+
+  try {
+    fetch('https://acceio-api.onrender.com/api/leads', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({
+        name:    fields.from_name  || '',
+        email:   fields.from_email || '',
+        phone:   fields.phone   || '',
+        message: fields.message || '',
+        source:  'ForB2C Page Contact Form'
+      })
+    });
+  } catch(_) {}
+
+  emailjs.sendForm("service_wgh0p69", "template_9qwd355", form)
+  .then(function() {
+    status.style.color = '#16a34a';
+    status.textContent = "✅ Message sent! We'll be in touch within 24 hours.";
+    form.reset();
+    btn.disabled = false;
+    btn.textContent = "Send Message →";
+    setTimeout(closeModal, 2800);
+  }, function() {
+    status.style.color = '#16a34a';
+    status.textContent = "✅ Message received! We'll be in touch within 24 hours.";
+    form.reset();
+    btn.disabled = false;
+    btn.textContent = "Send Message →";
+    setTimeout(closeModal, 2800);
+  });
+}
+</script>
+
+</body>
+</html>
